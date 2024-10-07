@@ -21,17 +21,17 @@ public class Main {
             }
 
             System.out.println("Enter the source currency (e.g., USD): ");
-            String sourceCurrency = scanner.next().toUpperCase();
-            System.out.println("Enter the target currency (e.g., EUR): ");
+            String fromCurrency = scanner.next().toUpperCase();
+            System.out.println("Enter the target currency (e.g., GBP): ");
             String toCurrency = scanner.next().toUpperCase();
             System.out.println("Enter the amount to be converted: ");
             double amount = scanner.nextDouble();
 
             double result = converter.convert(fromCurrency, toCurrency, amount);
             if(result != -1) {
-                System.out.println(amount + " " + sourceCurrency + " " + toCurrency);
-            }else {
-                System.out.println("Invalid input");
+                System.out.println(amount + " " + fromCurrency + " = " + result + " " + toCurrency);
+            } else {
+                System.out.println("Invalid input or could not retrieve exchange rate.");
             }
         }
         scanner.close();
