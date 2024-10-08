@@ -1,0 +1,2 @@
+[{"fromCurrency":"COP","toCurrency":"EUR","amount":500.0,"result":0.109095},
+  {"fromCurrency":"EUR","toCurrency":"COP","amount":2000.0,"result":9166365.0},{"fromCurrency":"USD","toCurrency":"MXN","amount":1500.0,"result":28963.65},{"fromCurrency":"BOB","toCurrency":"CLP","amount":2000.0,"result":266846.2}]
