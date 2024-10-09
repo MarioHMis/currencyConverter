@@ -1,6 +1,7 @@
 package com.currency.converter;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -15,7 +16,7 @@ public class SaveToJSON {
 
     // Método que guarda la conversión en un único archivo JSON
     public static void saveToJson(String fromCurrency, String toCurrency, double amount, double result) {
-        Gson gson = new Gson();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
         List<Conversion> conversions = new ArrayList<>();
 
         // Verifica si el archivo ya existe y lee las conversiones previas

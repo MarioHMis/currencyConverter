@@ -30,10 +30,10 @@ public class ApiHandler {
             Gson gson = new Gson();
             RateResponse response = gson.fromJson(reader, RateResponse.class);
 
-            reader.close(); // Cierra el lector
+            reader.close();
 
             if ("success".equals(response.getResult())) {
-                return response.getConversionRate(); // Devuelve la tasa de cambio
+                return response.getConversionRate();
             } else {
                 System.out.println("Error: could not get exchange rate. API result: " + response.getResult());
                 return -1;
@@ -41,7 +41,7 @@ public class ApiHandler {
 
         } catch (IOException e) {
             System.out.println("Exception: " + e.getMessage());
-            return -1; // Retorna -1 en caso de error
+            return -1;
         }
     }
 }

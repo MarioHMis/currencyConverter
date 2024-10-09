@@ -1,5 +1,7 @@
 package com.currency.converter;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Scanner;
 
 public class Main {
@@ -33,6 +35,8 @@ public class Main {
             String fromCurrency;
             String toCurrency;
             double amount;
+            LocalDate date = LocalDate.now();
+            LocalTime time = LocalTime.now();
 
             if (option == 1) {
                 System.out.println("Choose the source currency:");
@@ -56,8 +60,8 @@ public class Main {
 
             double result = converter.convert(fromCurrency, toCurrency, amount);
             if (result != -1) {
-                System.out.println(amount + " " + fromCurrency + " = " + result + " " + toCurrency);
-                history.addConversion(fromCurrency, toCurrency, amount, result);  // Agrega la conversión al historial
+                System.out.println(amount + " " + fromCurrency + " = " + result + " " + toCurrency +  " " + time + " " + date );
+                history.addConversion(fromCurrency, toCurrency, amount, result, time, date);  // Agrega la conversión al historial
                 SaveToJSON.saveToJson(fromCurrency, toCurrency, amount, result);  // Guarda la conversión en JSON
             } else {
                 System.out.println("Invalid input or could not retrieve exchange rate.");
