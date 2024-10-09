@@ -6,6 +6,7 @@ import com.currency.converter.util.SaveToJSON;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Main {
@@ -68,10 +69,10 @@ public class Main {
 
                 history.addConversion(fromCurrency, toCurrency, amount, result, time, date);
 
-                System.out.println("Do you want to save the conversion to a JSON file? (yes/no)");
+                System.out.println("Do you want to save the conversion to a JSON file? (y/n)");
                 String saveOption = scanner.next();
-                if ("yes".equalsIgnoreCase(saveOption)) {
-                    SaveToJSON.saveToJson(fromCurrency, toCurrency, amount, result);
+                if ("y".equalsIgnoreCase(saveOption)) {
+                    SaveToJSON.saveToJson(fromCurrency, toCurrency, amount, result, time, date);
                 }
             }
         }

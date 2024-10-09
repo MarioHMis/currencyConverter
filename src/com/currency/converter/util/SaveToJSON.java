@@ -10,13 +10,15 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Type;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class SaveToJSON {
     private static final String FILE_NAME = "conversion.json";
 
-    public static void saveToJson(String fromCurrency, String toCurrency, double amount, double result) {
+    public static void saveToJson(String fromCurrency, String toCurrency, double amount, double result, LocalTime time, LocalDate date) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         List<Conversion> conversions = new ArrayList<>();
 
