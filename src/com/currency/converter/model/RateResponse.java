@@ -1,10 +1,9 @@
-package com.currency.converter;
+package com.currency.converter.model;
 
 public class RateResponse {
     private String result;
     private double conversion_rate;
 
-    // Getters
     public String getResult() {
         return result;
     }
