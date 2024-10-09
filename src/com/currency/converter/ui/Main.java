@@ -72,7 +72,7 @@ public class Main {
                 System.out.println("Do you want to save the conversion to a JSON file? (y/n)");
                 String saveOption = scanner.next();
                 if ("y".equalsIgnoreCase(saveOption)) {
-                    SaveToJSON.saveToJson(fromCurrency, toCurrency, amount, result, time, date);
+                    SaveToJSON.saveToJson(fromCurrency, toCurrency, amount, result,LocalTime.now() , LocalDate.now());
                 }
             }
         }

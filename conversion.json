@@ -34,5 +34,21 @@
     "toCurrency": "USD",
     "amount": 200.0,
     "result": 0.047256
+  },
+  {
+    "fromCurrency": "COP",
+    "toCurrency": "USD",
+    "amount": 100.0,
+    "result": 0.023628,
+    "time": "13:48:35.337181300",
+    "date": "2024-10-09"
+  },
+  {
+    "fromCurrency": "BOB",
+    "toCurrency": "COP",
+    "amount": 500.0,
+    "result": 305244.85,
+    "time": "13:58:12.207175",
+    "date": "13:58:12"
   }
 ]
