@@ -1,0 +1,20 @@
+[
+  {
+    "fromCurrency": "BOB",
+    "toCurrency": "USD",
+    "amount": 100.0,
+    "result": 14.42
+  },
+  {
+    "fromCurrency": "BOB",
+    "toCurrency": "COP",
+    "amount": 500.0,
+    "result": 305244.85
+  },
+  {
+    "fromCurrency": "CLP",
+    "toCurrency": "USD",
+    "amount": 1000.0,
+    "result": 1.081
+  }
+]
